@@ -33,9 +33,17 @@ typedef struct Zone {
 } Zone;
 
 
-struct Zone         *zone;
+extern struct Zone         *zone;
 
+//##### FREE.C #####
+//void                free(void *ptr);
 
-void                free(void *ptr);
+//##### MALLOC.C #####
 void                *malloc(size_t size);
-void                *realloc(void *ptr, size_t size);
+//##### MALLOC_UTILS.C #####
+size_t              align16(size_t  size);
+
+//##### REALLOC.C #####
+//void                *realloc(void *ptr, size_t size);
+
+

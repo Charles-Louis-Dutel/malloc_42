@@ -21,7 +21,7 @@
 // #define SMALL_ZONE 106496
 
 typedef struct Bloc {
-    int             size;
+    size_t          size;
     bool            available;
     struct Bloc     *prev;
     struct Bloc     *next;
@@ -30,7 +30,7 @@ typedef struct Bloc {
 
 typedef struct Zone {
     int             zone_type;
-    int             size;
+    size_t          size;
     struct Bloc     *bloc_list;
     struct Zone     *next;
 } Zone;
@@ -48,8 +48,6 @@ int                 getZoneType(size_t size);
 long                getPageSize(size_t size);
 size_t              getZoneSize(int zone_type, size_t size);
 size_t              align16(size_t  size);
-struct Bloc         *createNewBlocNode(void *addr, size_t size, struct Bloc *prevBloc);
-
 
 //##### REALLOC.C #####
 //void                *realloc(void *ptr, size_t size);

@@ -57,16 +57,3 @@ size_t  align16(size_t  size)
     alignment = size + (16 - size % 16);
     return (alignment);
 }
-
-
-struct Bloc *createNewBlocNode(void *addr, size_t size, struct Bloc *prevBloc)
-{
-    struct Bloc  *newbloc = addr;
-
-    newbloc->size = align16(size);
-    newbloc->available = false;
-    newbloc->next = NULL;
-    newbloc->prev = prevBloc;
-
-    return (newbloc);
-}

@@ -1,15 +1,21 @@
 #include "../includes/malloc_42.h"
-#include <stdio.h>
 
 
 int main()
 {
-    size_t  size = 0;
+    char *test = malloc(7);
 
-    size = sizeof(Bloc);
-    printf("Taille d'une struct Bloc: %lu\nTaille de size avant align: %lu\n", sizeof(Bloc), size);
+    char string[7] = "prout";
 
-    size = align16(size);
-    printf("Taille de size apres align: %lu\n", size);
+    int i = 0;
+    while (string[i])
+    {
+        test[i] = string[i];
+        i++;
+    }
+    test[i] = '\0';
+
+    printf("Test 1er malloc: %s", test);
+
     return (0);
 }

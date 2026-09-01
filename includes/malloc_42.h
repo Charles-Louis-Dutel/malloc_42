@@ -7,6 +7,9 @@
 #include <sys/mman.h>
 #include <unistd.h>
 
+//A enlever
+#include <stdio.h>
+
 #define SIZE_ERROR 0
 #define TINY_TYPE 1
 #define SMALL_TYPE 2
@@ -33,7 +36,7 @@ typedef struct Zone {
 } Zone;
 
 
-extern struct Zone         *zone;
+extern struct Zone  *zone;
 
 //##### FREE.C #####
 //void                free(void *ptr);
@@ -41,7 +44,12 @@ extern struct Zone         *zone;
 //##### MALLOC.C #####
 void                *malloc(size_t size);
 //##### MALLOC_UTILS.C #####
+int                 getZoneType(size_t size);
+long                getPageSize(size_t size);
+size_t              getZoneSize(int zone_type, size_t size);
 size_t              align16(size_t  size);
+struct Bloc         *createNewBlocNode(void *addr, size_t size, struct Bloc *prevBloc);
+
 
 //##### REALLOC.C #####
 //void                *realloc(void *ptr, size_t size);

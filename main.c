@@ -1,13 +1,6 @@
-#include "../includes/malloc_42.h"
+#include "malloc_42.h"
+#include "libft.h"
 
-int ft_strlen(char *s)
-{
-    int i = 0;
-
-    while (s[i])
-        i++;
-    return (i);
-}
 
 int main()
 {

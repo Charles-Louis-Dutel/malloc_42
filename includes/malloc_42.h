@@ -6,6 +6,7 @@
 #include <stdbool.h>
 #include <sys/mman.h>
 #include <unistd.h>
+#include "../libft/includes/libft.h"
 
 //A enlever
 #include <stdio.h>

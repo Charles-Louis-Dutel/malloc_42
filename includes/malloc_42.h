@@ -40,7 +40,7 @@ typedef struct Zone {
 extern struct Zone  *zone;
 
 //##### FREE.C #####
-//void                free(void *ptr);
+void                free(void *ptr);
 
 //##### MALLOC.C #####
 void                *malloc(size_t size);

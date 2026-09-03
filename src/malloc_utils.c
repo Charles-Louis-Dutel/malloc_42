@@ -3,7 +3,7 @@
 
 int  getZoneType(size_t size)
 {
-    if (size <= 0)
+    if (size < 0)
         return (SIZE_ERROR);
     if (size <= TINY_BLOC)
         return (TINY_TYPE);
@@ -52,8 +52,13 @@ size_t   getZoneSize(int zone_type, size_t size)
 
 size_t  align16(size_t  size)
 {
+    if (size == 0)
+        return (16);
+
     size_t alignment = 0;
 
     alignment = size + (16 - size % 16);
     return (alignment);
 }
+
+

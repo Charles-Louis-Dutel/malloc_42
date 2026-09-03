@@ -3,7 +3,7 @@
 
 void    free(void *ptr)
 {
-    write(1, "FREE PERSO\n\n", 13);
+    //write(1, "FREE PERSO\n\n", 13);
 
     if(!ptr)
         return;

@@ -119,8 +119,13 @@ int main()
     ft_put_address_hexa((__uint64_t)test_large2);
     write(1, "\n\n", 3);
 
+    show_alloc_mem();
+
     free(test_large2);
     free(test_large);
     
+    write(1, "\n", 2);
+
+    show_alloc_mem();
     return (0);
 }

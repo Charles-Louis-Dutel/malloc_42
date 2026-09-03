@@ -21,7 +21,7 @@ SRC = \
 	$(SRCDIR)/malloc_utils.c \
 	$(SRCDIR)/free.c \
 	$(SRCDIR)/realloc.c \
-	$(SRCDIR)/show_alloc.c
+	$(SRCDIR)/show_alloc_mem.c
 
 OBJ = $(SRC:.c=.o)
 

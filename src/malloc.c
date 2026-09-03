@@ -7,6 +7,7 @@ static struct Bloc *createNewBlocNode(void *addr, size_t size, struct Bloc *prev
 {
     struct Bloc  *newbloc = addr;
 
+    newbloc->data_size = size;
     newbloc->size = align16(size);
     newbloc->available = false;
     newbloc->next = next_bloc;

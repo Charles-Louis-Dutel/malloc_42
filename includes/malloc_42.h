@@ -22,6 +22,7 @@
 // #define SMALL_ZONE 106496
 
 typedef struct Bloc {
+    size_t          data_size;
     size_t          size;
     bool            available;
     struct Bloc     *prev;
@@ -52,5 +53,9 @@ size_t              align16(size_t  size);
 
 //##### REALLOC.C #####
 //void                *realloc(void *ptr, size_t size);
+
+//##### SHOW_ALLOC_MEM.C #####
+void                show_alloc_mem(void);
+
 
 

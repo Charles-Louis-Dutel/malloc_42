@@ -3,8 +3,8 @@
 
 int  getZoneType(size_t size)
 {
-    if (size < 0)
-        return (SIZE_ERROR);
+    // if (size < 0)
+    //     return (SIZE_ERROR);
     if (size <= TINY_BLOC)
         return (TINY_TYPE);
     else if (size > TINY_BLOC && size <= SMALL_BLOCK)

@@ -42,5 +42,9 @@ void    *realloc(void *ptr, size_t size)
     if (!new_ptr)
         return (NULL);
     
-    
+    new_ptr = ft_memcpy(new_ptr, ptr, current->data_size);
+    if (!new_ptr)
+        return (NULL);
+    free(ptr);
+    return (new_ptr);
 }

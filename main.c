@@ -125,7 +125,12 @@ int main()
     free(test_large);
     
     write(1, "\n", 2);
+    show_alloc_mem();
 
+    test4 = realloc(test4, 16);
+    test3 = realloc(test3, 155);
+
+    write(1, "\n", 2);
     show_alloc_mem();
     return (0);
 }

@@ -12,7 +12,8 @@ SRC = \
 	$(SRCDIR)/ft_putchar.c \
 	$(SRCDIR)/ft_putnbr.c \
 	$(SRCDIR)/ft_putstr.c \
-	$(SRCDIR)/ft_strlen.c
+	$(SRCDIR)/ft_strlen.c \
+	$(SRCDIR)/ft_memcpy.c
 
 OBJ = $(SRC:.c=.o)
 

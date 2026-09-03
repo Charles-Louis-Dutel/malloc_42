@@ -13,3 +13,4 @@ void    ft_putchar(const char c);
 void    ft_putstr(const char *str);
 void    ft_putnbr(int n);
 void    ft_put_address_hexa(__uint64_t address);
+void    *ft_memcpy(void *dest, const void *src, size_t n);
